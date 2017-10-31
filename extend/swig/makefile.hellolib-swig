@@ -1,0 +1,23 @@
+PYLIB = /usr/bin
+PYINC = /usr/include/python3.4m
+CLIB = .
+# need the news for swig 3.0.12
+SWIG = swig
+
+
+# the library plus it warper
+_hellowrap.so: hellolib_wrap.o $(CLIB)/hellolib.o
+	gcc -shared hellolib_wrap.o $(CLIB)/hellolib.o -L$(PYLIB) -lpython3.4m -o  $@
+
+# generated wrapper module code
+hellolib_wrap.o: hellolib_wrap.c $(CLIB)/hellolib.h
+	gcc hellolib_wrap.c -fPIC -g -I$(CLIB) -I$(PYINC) -c -o $@
+
+hellolib_wrap.c: hellolib.i
+	$(SWIG) -python  -I$(CLIB)  hellolib.i
+
+hellolib.o: hellolib.c hellolib.h
+	gcc $(CLIB)/hellolib.c -fPIC -g -I$(CLIB) -c -o $(CLIB)/hellolib.o
+
+clean:
+	rm -rf *.dll *.o *.pyc  *.py *_wrap* *.so

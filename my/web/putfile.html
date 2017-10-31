@@ -1,0 +1,34 @@
+<html>
+<title>Mageck Analysis</title>
+
+<body>
+<h1>Magecko Count Analysis</h1>
+
+<form enctype="multipart/form-data" method=post action="cgi-bin/putfile.py">
+  <p>Analysis name: <input type=text name=AnaName></p>
+  <p>Library: <input type=file size=50 name=library></p>
+  <p>
+    Label 1 Name: <input type=text name=label1 value=L1> and it's fastq: <input type=file size=50 name=fileR1> 
+  </p>
+  <p>
+    Label 2 Name: <input type=text name=label2 value=L2> and it's fastq: <input type=file size=50 name=fileR2>    
+  </p>
+  <p><input type=submit value=Upload></p>
+</form>
+
+<div>
+<span style="color:red">Note: input data only the letters,numberand _ symbol, no space
+  or othe special symbol</span>
+
+<h5>paper: MAGeCK enables robust identification of essential genes from 
+genome-scale CRISPR/Cas9 knockout screens </h5>
+<h5>Library: Human CRISPR Knockout Pooled Library (GeCKO v2) <a
+href="https://media.addgene.org/cms/filer_public/7d/87/7d87eaa7-e940-41bf-bf2f-47b43c7ab905/zhang_human_geckov2_grna_sequences.zip">data</a>
+</h5>
+
+</div>
+<hr>
+<a href="cgi-bin/getfile.py?filename=cgi-bin/putfile.py">Viewscript code</a>
+
+</body>
+</html>

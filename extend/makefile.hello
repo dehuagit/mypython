@@ -1,0 +1,8 @@
+PYLIB=/usr/bin
+PYINC=/usr/include/python3.4m
+
+hello.dll: hello.c
+	gcc hello.c -g -I$(PYINC) -fPIC  -shared -L$(PYLIB) -lpython3.4m -o hello.dll
+
+clean:
+	rm -f hello.dll core

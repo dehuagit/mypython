@@ -1,0 +1,4 @@
+Hello stream world
+Enter a nuber>8 squard is 64
+Enter a nuber>6 squard is 36
+Enter a nuber>bye

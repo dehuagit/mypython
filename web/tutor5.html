@@ -1,0 +1,64 @@
+<html>
+<titl>CGI 101</title>
+<body>
+<h1> Common input devices  </h1>
+<hr>
+<form method=POST action="cgi-bin/tutor5.py">
+  <table>
+      <tr>
+        <th align=right>name:</th>
+        <td>
+        Enter your name: <input type=text name=name>
+      </td>
+      </tr>
+      
+      <tr>
+        <th align=right>shoe size</th>
+        <td>
+        <table>
+          <td> <input type=radio name=shoesize value=small>Small </td>
+          <td> <input type=radio name=shoesize value=medium>Medium </td>
+          <td> <input type=radio name=shoesize value=large>Large </td>
+        </table>
+      </td>
+      </tr>
+
+      <tr>
+        <th align=right>Occupation:
+        <td>
+            <select name=job>
+              <option>Developer</option>
+              <option>Manager</option>
+              <option>Student</option>
+            </select>
+        </td>
+      </tr>
+
+      <tr>
+        <th align=right>Oomments: </th>
+        <td>
+            <textarea name=comment cols=30 rows=2>
+            </textarea>
+        </td>
+
+      <tr>
+        <th align=right>Polictail afflication: </th>
+        <td> 
+          <table>
+            <td><input type=checkbox name=language value=Python>Python</td>
+            <td><input type=checkbox name=language value=Perl>Per</td>
+            <td><input type=checkbox name=language value=Tcl>Tcl</td>
+        </table>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+        <input type=submit value='send'>
+      </td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>
